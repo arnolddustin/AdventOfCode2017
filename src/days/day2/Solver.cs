@@ -9,17 +9,13 @@ namespace aoc.days.day2
         {
             var total = 0;
 
-            var a = new List<int>();
-
             foreach (var row in s)
             {
                 var cols = row.Split("\t");
-                var ints = new List<int>();
 
+                var ints = new List<int>();
                 foreach (var col in cols)
-                {
                     ints.Add(int.Parse(col));
-                }
 
                 ints.Sort();
                 total += ints[ints.Count - 1] - ints[0];
@@ -35,14 +31,13 @@ namespace aoc.days.day2
             foreach (var row in s)
             {
                 var cols = row.Split("\t");
-                var ints = new List<int>();
 
+                var ints = new List<int>();
                 foreach (var col in cols)
                     ints.Add(int.Parse(col));
 
                 ints.Sort();
 
-                var rowdone = false;
                 for (var i = ints.Count - 1; i > 0; i--)
                 {
                     for (var j = 0; j < i; j++)
@@ -50,11 +45,9 @@ namespace aoc.days.day2
                         if (ints[i] % ints[j] == 0)
                         {
                             total += ints[i] / ints[j];
-                           rowdone = true;
-                           break;
+                            break;
                         }
                     }
-                        if (rowdone) break;
                 }
             }
 
