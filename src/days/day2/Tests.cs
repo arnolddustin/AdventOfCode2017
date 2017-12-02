@@ -12,38 +12,25 @@ namespace aoc.days.day2
         [TestMethod]
         public void Day2Part1Samples()
         {
-            Assert.AreEqual(3, _h.Part1("1122"));
-            Assert.AreEqual(4, _h.Part1("1111"));
-            Assert.AreEqual(0, _h.Part1("1234"));
-            Assert.AreEqual(9, _h.Part1("91212129"));
+            Assert.AreEqual(18, _h.RunPart1("5\t1\t9\t5", "7\t5\t3", "2\t4\t6\t8"));
         }
 
         [TestMethod]
         public void Day2Part1()
         {
-            var expected = 1102;
-            var actual = _h.Part1();
-
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(53460, _h.SolvePart1());
         }
 
         [TestMethod]
         public void Day2Part2Samples()
         {
-            Assert.AreEqual(6, _h.Part2("1212"));
-            Assert.AreEqual(0, _h.Part2("1221"));
-            Assert.AreEqual(4, _h.Part2("123425"));
-            Assert.AreEqual(12, _h.Part2("123123"));
-            Assert.AreEqual(4, _h.Part2("12131415"));
+            Assert.AreEqual(9, _h.RunPart2("5\t9\t2\t8", "9\t4\t7\t3", "3\t8\t6\t5"));
         }
 
         [TestMethod]
         public void Day2Part2()
         {
-            var expected = 1076;
-            var actual = _h.Part2();
-
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(282, _h.SolvePart2());
         }
     }
 }

@@ -2,7 +2,7 @@ namespace aoc
 {
     public interface ISolver
     {
-        int Part1(string s);
-        int Part2(string s);
+        int Part1(params string[] s);
+        int Part2(params string[] s);
     }
 }

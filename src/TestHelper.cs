@@ -14,29 +14,25 @@ namespace aoc
             _solver = solver;
         }
 
-        public string InputSingleLine()
-        {
-            return InputAllLines().First();
-        }
-        public string[] InputAllLines()
+        string[] ReadInput()
         {
             return File.ReadAllLines(string.Format("../../../days/day{0}/input.txt", _day));
         }
 
-        public int Part1()
+        public int SolvePart1()
         {
-            return Part1(InputSingleLine());
+            return RunPart1(ReadInput());
         }
-        public int Part1(string s)
+        public int RunPart1(params string[] s)
         {
             return _solver.Part1(s);
         }
 
-        public int Part2()
+        public int SolvePart2()
         {
-            return Part2(InputSingleLine());
+            return RunPart2(ReadInput());
         }
-        public int Part2(string s)
+        public int RunPart2(params string[] s)
         {
             return _solver.Part2(s);
         }
